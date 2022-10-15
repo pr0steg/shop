@@ -1,8 +1,10 @@
-FROM python:3.8-alpine
+FROM python3.7-alpine
+MAINTAINER Name Surname
 
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUBUFERED 1
 
 COPY ./requirements.txt /requirements.txt
+
 RUN pip install -r /requirements.txt
 
 RUN mkdir /app
@@ -11,5 +13,5 @@ COPY ./app /app
 
 RUN adduser -D user
 RUN chown user:user -R /app/
-RUN chmod +x /app
+
 USER user
