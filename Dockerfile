@@ -1,4 +1,4 @@
-FROM python3.8-alpine
+FROM martinkaburu/python3.7-alpine
 MAINTAINER Name Surname
 
 ENV PYTHONUNBUBUFERED 1
