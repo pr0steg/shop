@@ -12,6 +12,6 @@ WORKDIR /app
 COPY ./app /app
 
 RUN adduser -D user
-RUN chown user:user -R /home/osboxes/Desktop/course/shop/app/
+RUN chown user:user -R /Desktop/course/shop/app/
 
 USER user
