@@ -11,7 +11,8 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
 
-RUN adduser -D user
-RUN chown user:user -R /app/
+RUN adduser -D dockeruser
+RUN addgroup -S appgroup && adduser -S dockeruser -G appgroup
+RUN chown dockeruser:dockeruser -R /app/
 
-USER user
+USER dockeruser
